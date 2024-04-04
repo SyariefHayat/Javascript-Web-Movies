@@ -190,7 +190,6 @@ function updateDetailUi(data) {
     aside.remove();
   });
 
-  return console.log(data);
 }
 
 // Fungsi untuk menyimpan detail element
