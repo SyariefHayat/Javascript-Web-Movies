@@ -405,6 +405,18 @@ table td {
 
 /* Ukuran Hp */
 @media screen and (max-width: 767px) {
+  section p {
+    font-size: 1.5em;
+  }
+
+  section h1 {
+    font-size: 2em;
+  }
+
+  section a {
+    margin-top: 20px;
+  }
+
   .header-content .logo a {
     font-size: 1.5em;
   }
