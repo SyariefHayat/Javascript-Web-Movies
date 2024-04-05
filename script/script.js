@@ -111,15 +111,18 @@ function updateSearchUi(posters, titles, years, imdbId) {
     card.classList.add("card");
     card.style.backgroundImage = `url(${poster})`;
 
+    // Membuat element article
+    // let article = document.createElement("article");
+
     // Membuat element title
     let titleEl = document.createElement("div");
     titleEl.classList.add("title");
-    titleEl.innerHTML = titles[i];
+    titleEl.innerHTML = `${titles[i]} (${years[i]})`;
 
     // Membuat element year
-    let yearEl = document.createElement("div");
-    yearEl.classList.add("year");
-    yearEl.innerHTML = years[i];
+    // let yearEl = document.createElement("div");
+    // yearEl.classList.add("year");
+    // yearEl.innerHTML = `(${years[i]})`;
 
     // Membuat tombol detail
     let seeDetail = document.createElement("div")
@@ -129,7 +132,6 @@ function updateSearchUi(posters, titles, years, imdbId) {
     // Masukkan element
     cardContainer.appendChild(card);
     cardContainer.appendChild(titleEl);
-    cardContainer.appendChild(yearEl);
     cardContainer.appendChild(seeDetail);
     mainContent.appendChild(cardContainer);
 
@@ -173,16 +175,12 @@ async function detailMovies(imdbId) {
 
 // Fungsi untuk memperbarui detail ui
 function updateDetailUi(data) {
-  // Seleksi DOM
   const main = document.querySelector("main");
-
-  // Membuat element aside 
-  const aside = document.createElement("aside");
+  const aside = document.createElement("aside")
 
   // Manipulasi element aside
   detailEl(aside, data);
 
-  // Masukkan element
   main.appendChild(aside);
 
   // Tutup aside 

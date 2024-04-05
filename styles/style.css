@@ -36,6 +36,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 header::after {
@@ -131,21 +132,17 @@ main {
 }
 
 .content {
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
 .header-content {
-  position: absolute;
-  top: 0;
   width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--palette-color1);
-  z-index: 1;
 }
 
 .header-content .logo a {
@@ -162,16 +159,15 @@ form label i {
   top: 0;
   left: 0;
   height: 100%;
-  padding: 7px 7px 5px 5px;
+  padding: 7px;
   font-size: 1.5em;
   cursor: pointer;
-  border-right: 1px solid var(--palette-color3);
 }
 
 input[type="text"] {
   width: 100%;
   height: 40px;
-  padding-left: 45px;
+  padding-left: 40px;
   font-size: 1.2em;
   border: none;
   border-radius: 5px;
@@ -188,28 +184,22 @@ input[type="text"]:focus {
 .main-content {
   width: 100%;
   height: 100%;
-  padding: 130px 20px 25px;
+  padding: 20px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
 }
 
 .card-container {
   position: relative;
   width: 200px;
-  height: 450px;
-  margin: 30px;
+  height: 100%;
+  margin: 20px 10px;
   display: flex;
   text-align: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .card {
@@ -218,29 +208,29 @@ input[type="text"]:focus {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
 
 .title {
   width: 100%;
+  font-size: 1em;
   margin-top: 10px;
-  color: var(--palette-color1);
-}
-
-.year {
-  width: 100%;
-  margin: 10px 0;
+  font-weight: bold;
 }
 
 .see-detail {
-  width: 100%;
-  color: blue;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
   font-size: 1em;
   cursor: pointer;
+  line-height: 30px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  color: var(--palette-color2);
+  background-color: var(--palette-color1);
 }
 
 .see-detail:hover {
@@ -257,7 +247,7 @@ aside {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 1;
 }
 
 .aside-container {
@@ -432,42 +422,30 @@ td {
 
 /* Ukuran Hp */
 @media screen and (max-width: 766px) {
-  body {
-    width: 100%;
-    height: 100vh;
-  }
-
-  section p {
-    font-size: 1.8em;
-  }
-
-  section h1 {
-    font-size: 2em;
-  }
-
-  section a {
-    margin-top: 20px;
-  }
-
   .header-content .logo a {
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+
+  input[type="text"] {
+    height: 30px;
+    padding-left: 35px;
+    font-size: 1em;
   }
 
   form {
     width: 50%;
   }
 
+  form label i {
+    padding: 2px 5px;
+  }
+
   .card-container {
-    width: 300px;
-    height: 480px;
+    width: 150px;
   }
 
-  .title {
-    font-size: 1.5em;
-  }
-
-  .see-detail {
-    font-size: 1.2em;
+  .card {
+    height: 250px;
   }
 
   .aside-container {
